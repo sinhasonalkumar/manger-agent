@@ -20,8 +20,8 @@ public class AgentClient {
 				 .uri("http://localhost:8081/healthCheck")
 			     .accept(MediaType.APPLICATION_JSON)
 			     .exchange()
-			     .flatMap(cr -> cr.bodyToMono(HealthVO.class))
-			     .onErrorReturn(new HealthVO("Dead"));
+			     .flatMap(cr -> cr.bodyToMono(HealthVO.class));
+			     
 			     
 	}
 	

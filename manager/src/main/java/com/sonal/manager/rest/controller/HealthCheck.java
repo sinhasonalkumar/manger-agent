@@ -28,7 +28,8 @@ public class HealthCheck {
 	@GetMapping(value="/agent/healthCheck")
 	public Mono<ResponseEntity<HealthVO>> agentHealthCheck(){
 		return agentClient.checkAgentHealth()
-						  .map(r -> new ResponseEntity<>(r,HttpStatus.OK));
+						  .map(r -> new ResponseEntity<>(r,HttpStatus.OK))
+						  .onErrorReturn(new ResponseEntity<>(new HealthVO("Dead"),HttpStatus.SERVICE_UNAVAILABLE));
 	}
 
 }
