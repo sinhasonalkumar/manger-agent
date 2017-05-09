@@ -41,7 +41,6 @@ public class JobSchedular {
 
 	}
 	
-	@Async
 	private void scheduleJobs(){
 		logger.info("Scheduled Jobs");
 		Random random = new Random();
