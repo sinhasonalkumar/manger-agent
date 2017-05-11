@@ -1,4 +1,4 @@
-package com.sonal.manager.rest.vo;
+package com.sonal.agent.rest.vo;
 
 import java.io.Serializable;
 
@@ -14,4 +14,5 @@ public class JobRequestVO implements Serializable {
 	private String param1;
 
 	private String param2;
+
 }

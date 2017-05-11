@@ -1,13 +1,15 @@
-package com.sonal.manager.rest.vo;
+package com.sonal.agent.rest.vo;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 @Setter
 @Getter
 @NoArgsConstructor
-public class JobResponseVO {
+@ToString(includeFieldNames=true)
+public class JobResultVO {
 
 	private String jobRequestId;
 
@@ -15,7 +17,7 @@ public class JobResponseVO {
 
 	private String status;
 
-	public JobResponseVO(String jobRequestId, boolean success, String status) {
+	public JobResultVO(String jobRequestId, boolean success, String status) {
 		super();
 		this.jobRequestId = jobRequestId;
 		this.success = success;
